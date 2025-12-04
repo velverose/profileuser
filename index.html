@@ -1,76 +1,114 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Портфолио — Тлемисов Арлан</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тлемисов Арлан — Портфолио</title>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #222;
+        }
+        header {
+            background: #1e1e1e;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-bottom: 10px;
+            padding-left: 8px;
+            border-left: 4px solid #1e1e1e;
+        }
+        .skills span {
+            background: #ddd;
+            padding: 6px 12px;
+            display: inline-block;
+            margin: 4px;
+            border-radius: 4px;
+        }
+        .contact a {
+            color: #1e1e1e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            color: #555;
+            margin: 20px 0;
+        }
+    </style>
+</head>
 
-<!-- Анимации AOS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<body>
 
+<header>
+    <h1>Тлемисов Арлан Сержанулы</h1>
+    <p>Студент-программист, обучаюсь разработке и современным технологиям</p>
+</header>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+<div class="container">
 
+    <section>
+        <h2>Обо мне</h2>
+        <p>
+            Сейчас учусь в университете на программиста.  
+            Интересуюсь программированием, веб-разработкой и участвую 
+            в совместных университетских проектах.
+        </p>
+    </section>
 
-body {
-margin: 0;
-font-family: 'Inter', sans-serif;
-background: radial-gradient(circle at top, #1a1a1a, #0d0d0d 70%);
-color: #e6e6e6;
-}
-header {
-padding: 70px 20px;
-text-align: center;
-background: linear-gradient(135deg, #141414, #1f1f1f);
-box-shadow: 0 0 40px rgba(0,0,0,0.6);
-}
-header img {
-width: 180px;
-height: 180px;
-border-radius: 50%;
-object-fit: cover;
-border: 5px solid #3a3a3a;
-box-shadow: 0 0 20px rgba(255,255,255,0.1);
-transition: 0.3s;
-}
-header img:hover {
-transform: scale(1.05);
-box-shadow: 0 0 25px rgba(255,255,255,0.2);
-}
-header h1 {
-margin: 20px 0 10px;
-font-size: 40px;
-font-weight: 700;
-}
-header p {
-opacity: 0.75;
-font-size: 18px;
-}
-.resume-btn {
-display: inline-block;
-margin-top: 25px;
-background: #ffffff10;
-padding: 14px 28px;
-border-radius: 8px;
-color: #fff;
-border: 1px solid #ffffff20;
-text-decoration: none;
-backdrop-filter: blur(5px);
-transition: 0.3s;
-}
-.resume-btn:hover {
-background: #ffffff25;
-}
-.container {
-max-width: 950px;
-margin: 50px auto;
-background: #161616;
-padding: 40px;
-border-radius: 16px;
-box-shadow: 0 0 25px rgba(0,0,0,0.4);
-}
-h2 {
-border-left: 4px solid #555;
-padding-left: 14px;
+    <section>
+        <h2>Навыки</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>C++</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Проекты</h2>
+        <p>Есть университетские проекты, выполнял их в команде.  
+           Ссылок пока нет, но могу предоставить детали по запросу.</p>
+    </section>
+
+    <section>
+        <h2>Контакты</h2>
+        <p class="contact">
+            Email: <a href="mailto:tlemisovarlan@gmail.com">
+                tlemisovarlan@gmail.com
+            </a>
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    © 2025 — Арлан Тлемисов
+</footer>
+
+</body>
+</html>
