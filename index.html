@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио — Тлемисов Арлан</title>
 
-    <!-- Анимации AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
@@ -14,71 +13,103 @@
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            background: radial-gradient(circle at top, #1a1a1a, #0d0d0d 70%);
-            color: #e6e6e6;
+            background: #0e0e0e;
+            color: #eee;
         }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: -100px;
+            left: 50%;
+            width: 1200px;
+            height: 1200px;
+            transform: translateX(-50%);
+            background: radial-gradient(circle, rgba(120,140,255,0.25), transparent 70%);
+            z-index: -1;
+            filter: blur(120px);
+        }
+
         header {
             padding: 70px 20px;
             text-align: center;
-            background: linear-gradient(135deg, #141414, #1f1f1f);
-            box-shadow: 0 0 40px rgba(0,0,0,0.6);
         }
+
         header img {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #3a3a3a;
-            box-shadow: 0 0 20px rgba(255,255,255,0.1);
+            border: 4px solid rgba(255,255,255,0.2);
+            box-shadow: 0 0 35px rgba(120,140,255,0.4);
             transition: 0.3s;
         }
+
         header img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(255,255,255,0.2);
+            transform: scale(1.06);
+            box-shadow: 0 0 45px rgba(120,140,255,0.55);
         }
+
         header h1 {
             margin: 20px 0 10px;
             font-size: 40px;
             font-weight: 700;
+            text-shadow: 0 0 10px rgba(255,255,255,0.15);
         }
-        header p {
-            opacity: 0.75;
-            font-size: 18px;
-        }
+
         .resume-btn {
             display: inline-block;
             margin-top: 25px;
-            background: #ffffff10;
+            background: rgba(255,255,255,0.08);
             padding: 14px 28px;
             border-radius: 8px;
             color: #fff;
-            border: 1px solid #ffffff20;
+            border: 1px solid rgba(255,255,255,0.2);
             text-decoration: none;
-            backdrop-filter: blur(5px);
             transition: 0.3s;
+            backdrop-filter: blur(6px);
         }
+
         .resume-btn:hover {
-            background: #ffffff25;
+            background: rgba(120,140,255,0.3);
+            box-shadow: 0 0 20px rgba(120,140,255,0.45);
         }
+
         .container {
             max-width: 950px;
             margin: 50px auto;
-            background: #161616;
             padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 0 25px rgba(0,0,0,0.4);
+            background: #161616;
+            border-radius: 18px;
+            box-shadow: 0 0 35px rgba(0,0,0,0.5),
+                        0 0 40px rgba(120,140,255,0.12);
         }
+
         h2 {
-            border-left: 4px solid #555;
+            border-left: 4px solid rgba(120,140,255,0.5);
             padding-left: 14px;
             font-size: 26px;
+            margin-bottom: 20px;
         }
-        ul li {
-            margin-bottom: 10px;
+
+        .project {
+            padding: 15px 20px;
+            margin: 15px 0;
+            background: #1c1c1c;
+            border-radius: 12px;
+            transition: .25s;
+            border: 1px solid rgba(255,255,255,0.08);
         }
+
+        .project:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 0 20px rgba(120,140,255,0.3);
+            border-color: rgba(120,140,255,0.45);
+        }
+
         footer {
             text-align: center;
-            margin: 50px 0;
+            margin: 40px 0;
             color: #777;
         }
     </style>
@@ -86,24 +117,38 @@
 <body>
 
 <header data-aos="fade-down">
-    <!-- Твоё фото -->
     <img src="arlan.jpg" alt="Фото Арлана">
 
     <h1>Тлемисов Арлан Сержанулы</h1>
-    <p>Студент-программист. Web-разработка, алгоритмы, современные технологии.</p>
-    <a class="resume-btn" href="resume.pdf" download>Скачать резюме</a>
+    <p>Студент-программист • Веб-разработка • SQL • Backend • Алгоритмы</p>
+
+    <a class="resume-btn" href="Тлемисов Арлан.pdf" download>📄 Скачать резюме</a>
 </header>
 
 <div class="container">
 
     <section data-aos="fade-up">
         <h2>Проекты</h2>
-        <ul>
-            <li><strong>Fintech-проект:</strong> разработка логики и структуры приложения для управления финансами.</li>
-            <li><strong>Учебный PostgreSQL-проект:</strong> создание БД, таблиц, ER-диаграмм, SQL-запросов и документации.</li>
-            <li><strong>Техпредпринимательство:</strong> мобильное приложение для психологической помощи.</li>
-            <li><strong>Практические mini-проекты:</strong> алгоритмы, веб-страницы, python-скрипты.</li>
-        </ul>
+
+        <div class="project">
+            <strong>💰 Fintech-приложение</strong><br>
+            Разработка структуры, логики, UX и финансовой модели для учета расходов.
+        </div>
+
+        <div class="project">
+            <strong>🗄 PostgreSQL — итоговый проект</strong><br>
+            Создание БД, таблиц, ER-диаграммы, SQL-запросы, нормализация, отчёт в формате Word.
+        </div>
+
+        <div class="project">
+            <strong>📱 Мобильное приложение психологической помощи</strong><br>
+            Проработка интерфейса, логики, защита проекта по технологическому предпринимательству.
+        </div>
+
+        <div class="project">
+            <strong>⚙ Mini-проекты</strong><br>
+            Веб-страницы, алгоритмы, Python-скрипты, Java-классы, личные эксперименты.
+        </div>
     </section>
 
     <section data-aos="fade-up">
@@ -115,9 +160,14 @@
 
 <footer>© 2025 Арлан Тлемисов</footer>
 
-<!-- AOS анимации -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
+<script>
+    AOS.init({
+        duration: 800,
+        easing: "ease-out-cubic",
+        once: true
+    });
+</script>
 
 </body>
 </html>
